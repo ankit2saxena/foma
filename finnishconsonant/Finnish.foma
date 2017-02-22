@@ -1,0 +1,34 @@
+read lexc files/Finnish.lexc
+define Lexicon;
+
+define G1 [a | e | i | o | u];
+define G2 [s | t | n | k | u];
+define G3 [s | m | p];
+define G4 [s | n | l | r | t];
+
+define K1 k -> 0 || \G1 \G2 _ ?* n .#. ;
+define K2 k -> 0 || ?+ [r | l] _ \e ?* n .#. ;
+define K3 a -> 0 || ?+ [s | t] k _ a .#. ;
+define K4 k -> g || ?+ n _ ?* n .#. ;
+define K5 k -> v || \G1 u _ u n .#. ;
+define K6 k -> ' || ?+ G1 G1 _ G1 ?* n .#. ;
+define K7 k -> j || ?+ [r | l] _ e ?* n .#. ;
+define K8 k -> 0 || ?+ u _ \u ?* n .#. ;
+
+define P1 p -> v || ?+ \G3 _ \p ?* n .#. ;
+define P2 p -> m || ?+ m _ ?* n .#. ;
+define P3 a -> 0 || ?+ s p _ a .#. ;
+
+define T1 t -> d || ?+ \G4 _ G1 ?* n .#. ;
+define T2 t -> n || ?+ n _ ?* n .#. ;
+define T3 t -> l || ?+ l _ ?* n .#. ;
+define T4 t -> r || ?+ r _ ?* n .#. ;
+
+
+define KRule K1 .o. K2 .o. K3 .o. K4 .o. K5 .o. K6 .o. K7 .o. K8;
+define PRule P1 .o. P2 .o. P3;
+define TRule T1 .o. T2 .o. T3 .o. T4;
+
+define OldRule [k+ @-> k, p+ @-> p, t+ @-> t || _ ?* n .#.];
+
+regex Lexicon .o. KRule .o. PRule .o. TRule .o. OldRule;

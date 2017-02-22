@@ -1,0 +1,61 @@
+Multichar_Symbols +Part +Gen
+
+LEXICON Root
+
+Stems ;
+
+LEXICON Stems
+tukka Sinf;
+kakku Sinf;
+pappi Sinf;
+tippa Sinf;
+katto Sinf;
+juttu Sinf;
+tikka Sinf;
+huppu Sinf;
+rotta Sinf;
+harakka Sinf;
+anoppi Sinf;
+ammatti Sinf;
+lika Sinf;
+maku Sinf;
+rako Sinf;
+tuke Sinf;
+halko Sinf;
+jalka Sinf;
+virka Sinf;
+nahka Sinf;
+niska Sinf;
+matka Sinf;
+lanka Sinf;
+linko Sinf;
+puku Sinf;
+suku Sinf;
+tiuku Sinf;
+raaka Sinf;
+piispa Sinf;
+kalpa Sinf;
+varpu Sinf;
+ripa Sinf;
+sopu Sinf;
+tapa Sinf;
+kampa Sinf;
+rumpu Sinf;
+sampe Sinf;
+sota Sinf;
+pata Sinf;
+kita Sinf;
+rinta Sinf;
+kanto Sinf;
+ranta Sinf;
+ilta Sinf;
+kulta Sinf;
+parta Sinf;
+kerta Sinf;
+vahti Sinf;
+kosto Sinf;
+
+
+LEXICON Sinf
++Part:a #;
++Gen:n #;
