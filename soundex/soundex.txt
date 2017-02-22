@@ -1,0 +1,1 @@
+Soundex algorithm implemented in Foma to generate transducer for the same problem.
