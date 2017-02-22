@@ -1,0 +1,4 @@
+Foma code to generate transducer for Finnish Consonant Gradation.
+The problem is defined in the following link:
+
+http://www.stanford.edu/~laurik/fsmbook/exercises/FinnishConsonantGradation.html
