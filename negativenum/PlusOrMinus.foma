@@ -1,0 +1,38 @@
+define N [1|2|3|4|5|6|7|8|9];
+define Z ["0" | N];
+
+define CarryUp [ [..] -> 1 || .#. _ "0"+ .#. .o. 1 -> 0 || .#. _ "0"+ .#. ];
+
+define AddUp  [1 <- "0", 2 <- 1, 3 <- 2, 4 <- 3, 5 <- 4, 6 <- 5, 7 <- 6, 8 <- 7, 9 <- 8, "0" <- 9 || .#. ("+") Z* _ 9* .#.];
+
+define NoLeadingZero [ "0" => .#. N Z* _ , .#. _ .#. ];
+
+define PlusMinusOne [CarryUp .o. AddUp .o. NoLeadingZero];
+
+define PlusMinusTwo   [PlusMinusOne   .o. PlusMinusOne];
+define PlusMinusThree [PlusMinusTwo   .o. PlusMinusOne];
+define PlusMinusFour  [PlusMinusThree .o. PlusMinusOne];
+define PlusMinusFive  [PlusMinusFour  .o. PlusMinusOne];
+define PlusMinusSix   [PlusMinusFive  .o. PlusMinusOne];
+define PlusMinusSeven [PlusMinusSix   .o. PlusMinusOne];
+define PlusMinusEight [PlusMinusSeven .o. PlusMinusOne];
+define PlusMinusNine  [PlusMinusEight .o. PlusMinusOne];
+define PlusMinusTen   [PlusMinusNine  .o. PlusMinusOne];
+
+define AddUpNeg  ["0" -> 1, 1 -> 2, 2 -> 3, 3 -> 4, 4 -> 5, 5 -> 6, 6 -> 7, 7 -> 8, 8 -> 9, 9 -> "0" || .#. %- Z* _ 9* .#.];
+
+define CarryUpNeg [ [..] -> 1 || .#. %- _ "0"+ .#. ];
+
+define NoLeadingZeroNeg [ "0" => .#. (%-)? N Z* _ , .#. (%-)? _ .#. ];
+
+define PlusMinusOneNeg [AddUpNeg .o. CarryUpNeg .o. NoLeadingZeroNeg];
+
+define PlusMinusTwoNeg   [PlusMinusOneNeg   .o. PlusMinusOneNeg];
+define PlusMinusThreeNeg [PlusMinusTwoNeg   .o. PlusMinusOneNeg];
+define PlusMinusFourNeg  [PlusMinusThreeNeg .o. PlusMinusOneNeg];
+define PlusMinusFiveNeg  [PlusMinusFourNeg  .o. PlusMinusOneNeg];
+define PlusMinusSixNeg   [PlusMinusFiveNeg  .o. PlusMinusOneNeg];
+define PlusMinusSevenNeg [PlusMinusSixNeg   .o. PlusMinusOneNeg];
+define PlusMinusEightNeg [PlusMinusSevenNeg .o. PlusMinusOneNeg];
+define PlusMinusNineNeg  [PlusMinusEightNeg .o. PlusMinusOneNeg];
+define PlusMinusTenNeg   [PlusMinusNineNeg  .o. PlusMinusOneNeg];
