@@ -1,0 +1,13 @@
+tabeta 'X ate Y'
+aketa 'X opened Y'
+tabesaseta 'X made Y eat Z'
+akesaseta 'X made Y open Z'
+taberareta 'X was eaten'
+akerareta 'X was opened'
+tabesaserareta 'X was made to eat Y'
+akesaserareta 'X was made to open Y'
+tabesasenai 'X doesn't/won't make Y eat Z'
+tabenai 'X doesn't/won't eat Y'
+tabesaserareru 'X is/will be made to eat Y'
+
+Problem is to generate FSA or transducer for the given Japanese words.
