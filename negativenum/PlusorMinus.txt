@@ -1,0 +1,8 @@
+The description of the problem is in the link below:
+http://www.stanford.edu/~laurik/fsmbook/exercises/PlusOrMinusNeg.html
+
+
+With PlusMinusOne on the stack, the command apply up 9 returns 10; and apply down 10 returns 9. 
+The apply up commands works for positive integers of any size but the apply down command does not yield any output for numbers smaller that 1.
+
+With PlusMinusOneNeg on the stack, the command apply down -4 returns -5 and apply up -3 returns -2.
