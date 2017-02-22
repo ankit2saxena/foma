@@ -1,0 +1,6 @@
+read lexc files/Japanese.lexc
+
+define Lexicon;
+define Cleanup "^" -> 0;
+
+regex Lexicon .o. Cleanup;

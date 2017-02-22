@@ -1,0 +1,17 @@
+Multichar_Symbols +V -PST +PST +PASS +CAUS +NEG
+
+LEXICON Root
+Verb ;
+
+LEXICON Verb
+eat:tabe Vinf;
+open:ake Vinf;
+
+LEXICON Vinf
++V+PST:^ta #;
++V+CAUS+PST:^saseta #;
++V+PASS+PST:^rareta #;
++V+CAUS+PASS+PST:^saserareta #;
++V+CAUS+Neg:^sasenai #;
++V+NEG:^nai #;
++V+CAUS+PASS-PST:^saserareru #;
