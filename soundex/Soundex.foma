@@ -1,0 +1,14 @@
+define V [a|e|h|i|o|u|w|y];
+define C1 [b|f|p|v];
+define C2 [c|g|j|k|q|s|x|z];
+define C3 [d|t];
+define C4 [l];
+define C5 [m|n];
+define C6 [r];
+define RuleV V -> 0 || ?+ _ ;
+define RuleC [C1 -> 1, C2 -> 2, C3 -> 3, C4 -> 4, C5 -> 5, C6 -> 6 || ?+ _];
+define RuleIden [1+ @-> 1, 2+ @-> 2, 3+ @-> 3, 4+ @-> 4, 5+ @-> 5, 6+ @-> 6];
+define RulePad [..] -> %0^3 || _ .#. ;
+define RuleDel ? -> 0 || ?^4 _ ;
+
+regex RuleV .o. RuleC .o. RuleIden .o. RulePad .o. RuleDel;
