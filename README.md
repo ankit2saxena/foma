@@ -1,0 +1,2 @@
+# foma
+foma morphological analyzer
